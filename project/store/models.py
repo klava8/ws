@@ -33,7 +33,7 @@ class Product(models.Model):
         return self.name
     
     def full(self):
-        return self.name + ' ' + self.price + ' ' + self.category + 'br' + self.image
+        return self.name + ' ' + str(self.price) + ' ' + str(self.category.category)
 
 class Category(models.Model):
     category = models.CharField(

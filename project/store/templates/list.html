@@ -1,0 +1,12 @@
+<h1>List of Fishes</h1>
+
+{% block content %}
+
+    {% for fish in fishes %}
+
+        <li>{{ fish.name }} {{ fish.price }}</li>
+        <a href="{% url 'detail' fish.pk %}">Get detail about Fish</a>
+
+    {% endfor %}
+
+{% endblock %}

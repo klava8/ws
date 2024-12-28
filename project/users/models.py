@@ -16,7 +16,8 @@ class Wallet(models.Model):
     profile = models.ForeignKey(
         to=Profile,
         verbose_name='Пользователь',
-        related_name='wallets'
+        related_name='wallets',
+        on_delete=models.CASCADE
     )
     money = models.FloatField(
         verbose_name='Сумма денег',

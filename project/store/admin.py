@@ -1,7 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import Product, Category
 
 @admin.register(Product)
@@ -11,4 +8,4 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('category')
+    list_display = ('category',)  # Кортеж с одним элементом
